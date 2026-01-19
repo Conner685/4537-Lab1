@@ -10,15 +10,15 @@ class ReaderApp {
     }
 
     initUI() {
-        document.getElementById('page-title').innerText = MESSAGES.readerTitle;
-        document.getElementById('back-btn').innerText = MESSAGES.backBtn;
+        document.getElementById('page-title').innerText = TEXT.readerTitle;
+        document.getElementById('back-btn').innerText = TEXT.backBtn;
     }
 
     fetchNotes() {
         const storedData = localStorage.getItem('lab1_notes');
         const time = new Date().toLocaleTimeString();
 
-        this.timeDisplay.innerText = MESSAGES.lastStored + time;
+        this.timeDisplay.innerText = TEXT.lastStored + time;
 
         this.notesContainer.innerHTML = "";
 
@@ -44,3 +44,5 @@ class ReaderApp {
 }
 
 const readerApp = new ReaderApp();
+
+//  Used Gemini (https://gemini.google.com) To check for any logical errors 

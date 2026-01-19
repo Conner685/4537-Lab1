@@ -13,7 +13,7 @@ class Note {
 
         const textArea = document.createElement('textarea');
         textArea.value = this.content;
-        textArea.placeholder = MESSAGES.placeholder;
+        textArea.placeholder = TEXT.placeholder;
 
         textArea.oninput = (e) => {
             this.content = e.target.value;
@@ -21,7 +21,7 @@ class Note {
 
         const removeBtn = document.createElement('button');
         removeBtn.className = 'remove-btn';
-        removeBtn.innerText = MESSAGES.removeBtn;
+        removeBtn.innerText = TEXT.removeBtn;
         removeBtn.onclick = () => this.removeCallback(this.id);
 
         container.appendChild(textArea);
@@ -44,12 +44,12 @@ class WriterApp {
     }
 
     initUI() {
-        document.getElementById('page-title').innerText = MESSAGES.writerTitle;
-        document.getElementById('back-btn').innerText = MESSAGES.backBtn;
+        document.getElementById('page-title').innerText = TEXT.writerTitle;
+        document.getElementById('back-btn').innerText = TEXT.backBtn;
 
         const btnContainer = document.getElementById('add-btn-container');
         const addBtn = document.createElement('button');
-        addBtn.innerText = MESSAGES.addBtn;
+        addBtn.innerText = TEXT.addBtn;
         addBtn.onclick = () => this.addNote();
         btnContainer.appendChild(addBtn);
     }
@@ -95,8 +95,10 @@ class WriterApp {
         localStorage.setItem('lab1_notes', JSON.stringify(dataToSave));
         
         const time = new Date().toLocaleTimeString();
-        this.timeDisplay.innerText = MESSAGES.lastStored + time;
+        this.timeDisplay.innerText = TEXT.lastStored + time;
     }
 }
 
 const writerApp = new WriterApp();
+
+//  Used Gemini (https://gemini.google.com) To check for any logical errors 
