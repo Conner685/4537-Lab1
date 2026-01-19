@@ -1,4 +1,4 @@
-export const TEXT = {
+const TEXT = {
     writerTitle: "Note Writer",
     readerTitle: "Note Reader",
     lastStored: "Stored at: ",
