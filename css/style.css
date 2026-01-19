@@ -1,0 +1,68 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 1.25rem;
+    background-color: gainsboro;
+}
+
+h1 {
+    color: black;
+    font-size: 2rem;
+}
+
+.timestamp {
+    position: absolute;
+top: 1.25rem;   
+    right: 1.25rem; 
+    background: whitesmoke;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.25rem; 
+    font-size: 0.9rem;
+}
+
+.note-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.note-card {
+    background: white;
+    border: 1px solid lightgray;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 15.625rem;
+    height: 9.375rem; 
+    margin-bottom: 0.625rem; 
+    resize: none;
+    padding: 0.3rem;
+}
+
+button {
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+button.remove-btn {
+    background-color: red;
+}
+
+button.remove-btn:hover {
+    background-color: darkred;
+}
+
+#add-btn-container {
+    margin-bottom: 1.25rem;
+}
+/* Used Gemini (https://gemini.google.com) to do conversions automatically after I mistakenly did all my sizes in pixels */
